@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs
+  namespace: erikmjacobs
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:55bc39bd771ad331756d41f272bc7bcaf3d7fe060c5ce4dba6e478ecf65037ed
+        name: container-image
+        resources: {}
+status: {}
